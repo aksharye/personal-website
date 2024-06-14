@@ -15,7 +15,7 @@ const Card = (props) => {
               {props.desc}
               <div class="w-3/4 text-center absolute left-5 bottom-[3vmin] flex justify-start">
                 {props.tags.map((entry) => {
-                  return <div class="inline text-sm text-gray-950 bg-sky-200 font px-3 rounded-xl mr-2">{entry}</div>
+                  return <div key={entry} class="inline text-sm text-gray-950 bg-sky-200 font px-3 rounded-xl mr-2">{entry}</div>
                 })}
               </div>
             </div>

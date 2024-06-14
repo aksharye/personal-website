@@ -135,7 +135,7 @@ export default function Home() {
 
       <div id="image-track" class="flex overscroll-none gap-[4vmin] absolute left-[50%] top-[65%] translate-x-[-50%] translate-y-[-50%] select-none" data-mouse-down-at="0" data-prev-percentage="0">
           {data.map((entry) => {
-            return <Card title={entry.title} desc={entry.desc} github={entry.github} tags={entry.tags} image={entry.image}/>
+            return <Card key={entry.title} title={entry.title} desc={entry.desc} github={entry.github} tags={entry.tags} image={entry.image}/>
           })}
       </div>
     </div>
