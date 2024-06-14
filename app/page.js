@@ -100,19 +100,21 @@ export default function Home() {
     window.ontouchmove = e => handleOnMove(e.touches[0]);
   })
 
-  let iconStyle = {'color': 'rgba(158, 173, 232, 0.2)', 'margin': "6px"}
+  let iconStyle = {'color': 'white', 'margin': "12px"}
 
   return (
-    <div className="m-0 min-h-screen bg-stone-950">
-      <nav class=" w-full">
-        <div class="container text-xl mx-auto px-6 py-3 flex">
+    <div className="m-0 overscroll-none min-h-screen bg-stone-950">
+      <nav class="flex min-w-screen">
+        <div class="text-xl w-1/2 px-6 py-3 flex">
           <a href="#" class="px-4 py-2 text-sky-100 hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">Home</a>
           <a href="#" class="px-4 py-2 text-sky-100 hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">About</a>
           <a href="#" class="px-4 py-2 text-sky-100 hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">CV</a>
         </div>
-        <div>
-          
-        </div>
+        <div class="w-1/2 flex text-4xl items-center justify-end px-6 mx-auto">
+            <FaGithub style={iconStyle}/>
+            <FaLinkedin style={iconStyle}/>
+            <FaFile style={iconStyle}/>
+          </div>
       </nav>
 
       <div class="text-sky-100 w-screen block justify-center h-[30vh] items-center">
@@ -123,11 +125,7 @@ export default function Home() {
             Super GM
           </div>
 
-          <div class="flex h-1/4 text-5xl justify-center">
-            <FaGithub style={iconStyle}/>
-            <FaLinkedin style={iconStyle}/>
-            <FaFile style={iconStyle}/>
-          </div>
+
       </div>
       
       
@@ -135,7 +133,7 @@ export default function Home() {
       
       
 
-      <div id="image-track" class="flex gap-[4vmin] absolute left-[50%] top-[65%] translate-x-[-50%] translate-y-[-50%] select-none" data-mouse-down-at="0" data-prev-percentage="0">
+      <div id="image-track" class="flex overscroll-none gap-[4vmin] absolute left-[50%] top-[65%] translate-x-[-50%] translate-y-[-50%] select-none" data-mouse-down-at="0" data-prev-percentage="0">
           {data.map((entry) => {
             return <Card title={entry.title} desc={entry.desc} github={entry.github} tags={entry.tags} image={entry.image}/>
           })}
