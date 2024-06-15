@@ -12,7 +12,7 @@ const Card = (props) => {
           <div class="absolute top-[56vmin] md:top-[28vmin] rounded-b-3xl p-5 opacity-80 bg-gray-950 w-[80vmin] md:w-[40vmin] h-[56vmin] md:h-[28vmin] object-cover object-center">
             <div class="absolute group-hover:cursor-pointer text-4xl bottom-[2vmin] right-[2vmin] " onClick={() => window.open(props.github, '_blank')}><FaGithub style={iconStyle}/></div>
             <h2 class="text-sky-100 flex justify-center font-bold text-lg md:text-xl">{props.title}</h2>
-            <div class="mt-2 md:mt-5 text-sm md:text-md text-sky-100 text-center">
+            <div class="mt-2 md:mt-5 text-sm md:text-lg text-sky-100 text-center">
               {props.desc}
               <div class="w-3/4 text-center absolute left-5 bottom-[3vmin] flex justify-start">
                 {props.tags.map((entry) => {
