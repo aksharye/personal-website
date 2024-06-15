@@ -106,9 +106,9 @@ export default function Home() {
     <div className="m-0 overscroll-none min-h-screen bg-stone-950">
       <nav class="flex min-w-screen">
         <div class="text-xl w-1/2 px-2 md:px-6 py-3 flex">
-          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">Home</a>
-          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">About</a>
-          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">CV</a>
+          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">Home</a>
+          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">About</a>
+          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">CV</a>
         </div>
         <div class="w-1/2 flex text-2xl md:text-4xl items-center justify-end px-2 md:px-6 mx-auto">
             <FaGithub style={iconStyle}/>
@@ -118,7 +118,7 @@ export default function Home() {
       </nav>
 
       <div class="text-sky-100 w-screen block justify-center h-[15vh] md:h-[30vh] items-center">
-          <div class="flex pt-[5vh] justify-center items-center text-4xl md:text-7xl font-extrabold">Akshar Yeccherla</div>
+          <div class="flex pt-[2vh] md:pt-[5vh] justify-center items-center text-4xl md:text-7xl font-extrabold">Akshar Yeccherla</div>
 
 
           <div class="flex h-1/4 text-2xl md:text-3xl justify-center pt-[2vh]">
