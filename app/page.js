@@ -19,7 +19,8 @@ export default function Home() {
 
   useEffect (() => {
     const track = document.getElementById("image-track");
-
+    track.dataset.percentage = -50
+    track.dataset.prevPercentage = -50
     const handleOnDown = e => {
       console.log(e.clientX);
       track.dataset.mouseDownAt = e.clientX;
@@ -101,7 +102,7 @@ export default function Home() {
   })
 
   let iconStyle = {'color': '#e0f2fe', 'margin': "6px"}
-
+  
   return (
     <div className="m-0 overscroll-none min-h-screen bg-stone-950">
       <nav class="flex min-w-screen">
