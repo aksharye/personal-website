@@ -31,15 +31,6 @@ export default function Home() {
       track.dataset.prevPercentage = track.dataset.percentage;
     }
 
-    const handleOnScrollDown = e => {
-      track.dataset.scrollAt = e.scrollLeft;
-    }
-
-    const handleOnScrollUp = () => {
-      track.dataset.scrollAt = "0";  
-      track.dataset.prevPercentage = track.dataset.percentage;
-    }
-
     const handleOnMove = e => {
       if(track.dataset.mouseDownAt === "0") return;
       
@@ -47,30 +38,7 @@ export default function Home() {
             maxDelta = window.innerWidth / 2;
       
       const percentage = (mouseDelta / maxDelta) * -100,
-            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage / 3,
-            nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-      
-      track.dataset.percentage = nextPercentage;
-      
-      track.animate({
-        transform: `translate(${nextPercentage}%, -50%)`
-      }, { duration: 1200, fill: "forwards" });
-      
-      for(const image of track.getElementsByClassName("image")) {
-        image.animate({
-          objectPosition: `${100 + nextPercentage}% center`
-        }, { duration: 1200, fill: "forwards" });
-      }
-    }
-
-    const handleOnScroll = e => {
-      if(track.dataset.scrollAt === "0") return;
-      
-      const mouseDelta = parseFloat(track.dataset.scrollAt) - e.scrollLeft,
-            maxDelta = window.innerWidth / 2;
-      
-      const percentage = (mouseDelta / maxDelta) * -100,
-            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage / 2,
             nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
       
       track.dataset.percentage = nextPercentage;
@@ -94,8 +62,39 @@ export default function Home() {
     track.ontouchend = e => handleOnUp(e.touches[0]);
     track.onmousemove = e => handleOnMove(e);
     track.ontouchmove = e => handleOnMove(e.touches[0]);
-  })
 
+    window.addEventListener("wheel", myFunction);            
+
+    function myFunction(e) {            
+      //prevent body scrolling
+      //Check if the position is greater/less than the 
+      //width of your content and prevent the scroll from accumulating.
+
+      //Scroll by w.e speed you want.
+      var nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage);
+      var nextPercentage = 0;
+      
+      if (e.wheelDelta > 0) {
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) - 5;
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+      } else {
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + 5;
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+      }
+
+      track.animate({
+        transform: `translate(${nextPercentage}%, -50%)`
+      }, { duration: 1200, fill: "forwards" });
+      
+      for(const image of track.getElementsByClassName("image")) {
+        image.animate({
+          objectPosition: `${100 + nextPercentage}% center`
+        }, { duration: 1200, fill: "forwards" });
+      }
+      track.dataset.prevPercentage = track.dataset.percentage
+      track.dataset.percentage = nextPercentage;
+    }
+  })
   let iconStyle = {'color': '#e0f2fe', 'margin': "6px"}
   
   return (
@@ -129,7 +128,7 @@ export default function Home() {
       
       
 
-      <div id="image-track" class="flex overscroll-none gap-[4vmin] absolute left-[50%] top-[60%] md:top-[65%] translate-x-[-50%] translate-y-[-50%] select-none" data-mouse-down-at="0" data-prev-percentage="0">
+      <div id="image-track" class="flex gap-[4vmin] absolute left-[50%] top-[60%] md:top-[65%] translate-x-[-50%] translate-y-[-50%] select-none" data-mouse-down-at="0" data-prev-percentage="0">
           {data.map((entry) => {
             return <Card key={entry.title} title={entry.title} desc={entry.desc} github={entry.github} tags={entry.tags} image={entry.image}/>
           })}
