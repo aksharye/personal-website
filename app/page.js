@@ -47,7 +47,7 @@ export default function Home() {
             maxDelta = window.innerWidth / 2;
       
       const percentage = (mouseDelta / maxDelta) * -100,
-            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage / 3,
             nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
       
       track.dataset.percentage = nextPercentage;
@@ -89,15 +89,10 @@ export default function Home() {
     /* -- Had to add extra lines for touch events -- */
 
     track.onmousedown = e => handleOnDown(e);
-
     track.ontouchstart = e => handleOnDown(e.touches[0]);
-
     track.onmouseup = e => handleOnUp(e);
-
     track.ontouchend = e => handleOnUp(e.touches[0]);
-
     track.onmousemove = e => handleOnMove(e);
-
     track.ontouchmove = e => handleOnMove(e.touches[0]);
   })
 
