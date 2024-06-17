@@ -8,11 +8,11 @@ import { FaGithub, FaLinkedin, FaFile} from 'react-icons/fa'
 const data = [
   {title: "CNCM Online", image: "water.jpg", github: "https://github.com/central-nc-math-group/cncm-online", tags: ["Next.js", "MongoDB", "Firebase"], desc: "An innovative contest platform with real-time scoring and leaderboard updates. Inspired by the Codeforces model, but for math conmpetitions."},
   {title: "Delaunay Mesh Deformation", image: "vizag.jpg", github: "https://github.com/aksharye/delaunay-mesh-deformation", tags: ["Python", "Algorithms"], desc: "Python implementations of several Delaunay-based mesh deformation algorithm, such as DGM and DGM-RBF, with novel improvements."},
-  {title: "Conditional Model Reliance", image: "dubai.jpg", github: "https://github.com/aksharye/conditional-model-reliance", tags: ["Python", "Machine Learning"], desc: "A Python package for computing the conditional model reliance (CMR) variable importance metric, as outlined in (paper)."},
+  {title: "Conditional Model Reliance", image: "dubai.jpg", github: "https://github.com/aksharye/conditional-model-reliance", tags: ["Python", "ML"], desc: "A Python package for computing the conditional model reliance (CMR) variable importance metric, as outlined in (paper)."},
   {title: "Wyvern", image: "fall.jpg", github: "https://github.com/aksharye/wyvern-frontend", tags: ["Svelte", "Peer.js", "Socket.IO"], desc: "Lightweight video-call platform with viewer-level scene control. Think OBS, but in the hands of the viewer."},
   {title: "Variable Importance Tester", image: "sven.jpg", github: "https://github.com/KevinH2003/variable-importance", tags: ["Python", "ML"], desc: "Python package to test datasets against combinations of feature screening, models, and variable importance metrics."},
   {title: "This Website", image: "pandas.jpg", github: "https://github.com/aksharye/personal-website", tags: ["Next.js", "Tailwind"], desc: "Source code for this website to house my cool projects and photography! Parallax effect inspired from (website)."},
-  {title: "Mask R-CNN for Cars", image: "bird.jpg", github: "https://github.com/aksharye/mask-rcnn-car-detection", tags: ["Python", "Machine Learning"], desc: "Object detection model for detecting cars on dashcam-view images, developed with Mask-RCNN, TensorFlow, and Keras."}
+  {title: "Mask R-CNN for Cars", image: "bird.jpg", github: "https://github.com/aksharye/mask-rcnn-car-detection", tags: ["Python", "ML"], desc: "Object detection model for detecting cars on dashcam-view images, developed with Mask-RCNN, TensorFlow, and Keras."}
 ]
 
 export default function Home() {
@@ -116,8 +116,8 @@ export default function Home() {
           <div class="flex pt-[2vh] md:pt-[5vh] justify-center items-center text-4xl md:text-7xl font-extrabold">Akshar Yeccherla</div>
 
 
-          <div class="text-3xl md:text-4xl [text-wrap:balance]">
-            <span class="w-screen mt-2 md:mt-5 text-sky-100 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+          <div class="text-2xl md:text-4xl [text-wrap:balance]">
+            <span class="w-screen mt-1 md:mt-2 text-sky-100 inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
             <ul class="block text-center animate-text-slide-6 text-left leading-tight [&_li]:block">
                 <li>Aspiring Developer</li>
                 <li>Competitive Programmer</li>
