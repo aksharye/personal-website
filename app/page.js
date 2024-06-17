@@ -38,7 +38,7 @@ export default function Home() {
             maxDelta = window.innerWidth / 2;
       
       const percentage = (mouseDelta / maxDelta) * -100,
-            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage / 2,
+            nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage / 4,
             nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
       
       track.dataset.percentage = nextPercentage;
@@ -75,10 +75,10 @@ export default function Home() {
       var nextPercentage = 0;
       
       if (e.wheelDelta > 0) {
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) - 5;
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) - 2;
         nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
       } else {
-        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + 5;
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + 2;
         nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
       }
 
