@@ -116,9 +116,18 @@ export default function Home() {
           <div class="flex pt-[2vh] md:pt-[5vh] justify-center items-center text-4xl md:text-7xl font-extrabold">Akshar Yeccherla</div>
 
 
-          <div class="flex h-1/4 text-2xl md:text-3xl justify-center pt-[2vh]">
-            Super GM
-          </div>
+          <div class="text-3xl md:text-4xl [text-wrap:balance]">
+            <span class="w-screen mt-2 md:mt-5 text-sky-100 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+            <ul class="block text-center animate-text-slide-6 text-left leading-tight [&_li]:block">
+                <li>Aspiring Developer</li>
+                <li>Competitive Programmer</li>
+                <li>Wannabe Photographer</li>
+                <li>Student</li>
+                <li>Speedrunner?</li>
+                <li>Galaxy Master</li>
+                <li aria-hidden="true">Aspiring Developer</li>
+            </ul>
+          </span></div>
 
 
       </div>
