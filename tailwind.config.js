@@ -8,17 +8,18 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        'xs': '10px',
-        'sm': '12px',
-        'md': '14px',
-        'lg': '18px',
-        'xl': '20px',
-        '2xl': '24px',
-        '3xl': '30px',
-        '4xl': '36px',
-        '5xl': '48px',
-        '6xl': '60px',
-        '7xl': '72px'
+        'xs': '1vh',
+        'sm': '1.5vh',
+        'md': '1.5vh',
+        'base': '1.5vh',
+        'lg': '1.75vh',
+        'xl': '2vh',
+        '2xl': '2vh',
+        '3xl': '3vh',
+        '4xl': '4vh',
+        '5xl': '5vh',
+        '6xl': '6vh',
+        '7xl': '7vh'
       },
       backgroundClip: {
         'text': 'text',
