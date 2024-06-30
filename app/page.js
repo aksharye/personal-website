@@ -95,19 +95,19 @@ export default function Home() {
       track.dataset.percentage = nextPercentage;
     }
   })
-  let iconStyle = {'color': '#e0f2fe', 'margin': "6px"}
+  let iconStyle = {'color': '#e0f2fe', 'margin': "6px", 'cursor': "pointer"}
   
   return (
     <div className="m-0 overscroll-none overflow-none min-w-screen min-h-screen bg-stone-950">
       <nav class="flex min-w-screen">
         <div class="text-xl w-1/2 px-2 md:px-6 py-3 flex">
-          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">Home</a>
-          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">About</a>
-          <a href="#" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">CV</a>
+          <a href="/" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">Home</a>
+          <a href="/about" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">About</a>
+          <a href="/cv" class="px-2 md:px-4 py-2 text-sky-100 hover:px-2 md:hover:px-4 hover:py-2 hover:rounded-md hover:bg-opacity-25 hover:bg-slate-200 hover:text-gray-200">CV</a>
         </div>
         <div class="w-1/2 flex text-2xl md:text-4xl items-center justify-end px-2 md:px-6 mx-auto">
-            <FaGithub style={iconStyle}/>
-            <FaLinkedin style={iconStyle}/>
+            <FaGithub style={iconStyle} onClick={() => window.open("https://github.com/aksharye", '_blank')}/>
+            <FaLinkedin style={iconStyle} onClick={() => window.open("https://www.linkedin.com/in/aksharyeccherla/", '_blank')}/>
             <FaFile style={iconStyle}/>
           </div>
       </nav>
