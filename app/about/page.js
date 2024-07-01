@@ -5,6 +5,8 @@ import Card from "../components/Card";
 import { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaFile} from 'react-icons/fa'
 
+const URI = "http://localhost:3000/"
+
 export default function About() {
 
   let iconStyle = {'color': '#e0f2fe', 'margin': "6px", 'cursor': "pointer"}
@@ -24,28 +26,21 @@ export default function About() {
           </div>
       </nav>
 
-      <div class="text-sky-100 w-screen block justify-center h-[15vh] md:h-[30vh] items-center">
-          <div class="flex pt-[2vh] md:pt-[5vh] justify-center items-center text-4xl md:text-7xl font-extrabold">Akshar Yeccherla</div>
-
-
-          <div class="text-2xl md:text-4xl [text-wrap:balance]">
-            <span class="w-screen mt-1 md:mt-2 text-sky-100 inline-flex flex-col h-[calc(theme(fontSize.2xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
-            <ul class="block text-center animate-text-slide-6 text-left leading-tight [&_li]:block">
-                <li>Aspiring Developer</li>
-                <li>Competitive Programmer</li>
-                <li>Wannabe Photographer</li>
-                <li>Student</li>
-                <li>Speedrunner?</li>
-                <li>Galaxy Master</li>
-                <li aria-hidden="true">Aspiring Developer</li>
-            </ul>
-          </span></div>
-
-
+      <div class="text-sky-100 w-screen block justify-center h-[20vh] items-center">
+          <div class="flex pt-[1vh] md:pt-[5vh] justify-center items-center text-4xl md:text-7xl font-extrabold">About Me</div>
       </div>
       
-      
-      
+      <div class="w-screen flex flex-col md:flex-row justify-center pt-[25vh] md:pt-[0vh] h-[45vw] md:h-[45vh] items-center">
+        <div class="flex items-center justify-center w-screen md:w-1/3">
+          <div class="flex rounded-full justify-center items-center w-[45vw] h-[45vw] md:w-[45vh] md:h-[45vh] bg-gradient-to-r from-emerald-400 to-cyan-400">
+            <img class="rounded-full h-[43vw] md:h-[43vh]" src={URI + "/akshar.jpg"}></img>
+          </div>
+        </div>
+
+        <div className="w-screen md:w-[60vw] mx-1 text-sky-100 text-lg p-5 md:text-3xl">
+          Hi! My name is Akshar Yeccherla, and I'm a rising junior at <strong>Duke University</strong>. I'm currently a Software Engineering intern at <strong>Capital One</strong> this summer, and I have interned at <strong>NetApp</strong> in the past. My interests lie in full-stack development, algorithm design, and systems. You can find some of my relevant projects, such as <strong>Wyvern</strong> on the home page. I'm involved with competitive math and programming at Duke, where I am the lead coordinator of the <strong>Duke Math Meet</strong> as well as a participant on one of Duke's <strong>ICPC</strong> teams, which placed 2nd at regionals this year. You can find my <strong>CodeForces</strong> profile here. In my free time, I'm a video game completionist, having 100%ed and successfully speedrun multiple Mario games, including <strong>Super Mario Galaxy</strong>. You can checkout my <strong>speedrun.com</strong> profile here.
+        </div>
+      </div>
       
       
     </div>
