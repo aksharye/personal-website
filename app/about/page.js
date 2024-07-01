@@ -6,7 +6,7 @@ import { useEffect } from "react";
 import { FaGithub, FaLinkedin, FaFile} from 'react-icons/fa'
 
 const URI = "http://localhost:3000/"
-
+let text="Hi! My name is Akshar Yeccherla, and I'm a rising junior at <strong>Duke University</strong>. I'm currently a Software Engineering intern at <strong>Capital One</strong> this summer, and I have interned at <strong>NetApp</strong> in the past. My interests lie in full-stack development, algorithm design, and systems. You can find some of my relevant projects, such as <strong>Wyvern</strong> on the home page. I'm involved with competitive math and programming at Duke, where I am the lead coordinator of the <strong>Duke Math Meet</strong> as well as a participant on one of Duke's <strong>ICPC</strong> teams, which placed 2nd at regionals this year. You can find my <strong>CodeForces</strong> profile here. In my free time, I'm a video game completionist, having 100%ed and successfully speedrun multiple Mario games, including <strong>Super Mario Galaxy</strong>. You can checkout my <strong>speedrun.com</strong> profile here.";
 export default function About() {
 
   let iconStyle = {'color': '#e0f2fe', 'margin': "6px", 'cursor': "pointer"}
@@ -38,7 +38,7 @@ export default function About() {
         </div>
 
         <div className="w-screen md:w-[60vw] mx-1 text-sky-100 text-lg p-5 md:text-3xl">
-          Hi! My name is Akshar Yeccherla, and I'm a rising junior at <strong>Duke University</strong>. I'm currently a Software Engineering intern at <strong>Capital One</strong> this summer, and I have interned at <strong>NetApp</strong> in the past. My interests lie in full-stack development, algorithm design, and systems. You can find some of my relevant projects, such as <strong>Wyvern</strong> on the home page. I'm involved with competitive math and programming at Duke, where I am the lead coordinator of the <strong>Duke Math Meet</strong> as well as a participant on one of Duke's <strong>ICPC</strong> teams, which placed 2nd at regionals this year. You can find my <strong>CodeForces</strong> profile here. In my free time, I'm a video game completionist, having 100%ed and successfully speedrun multiple Mario games, including <strong>Super Mario Galaxy</strong>. You can checkout my <strong>speedrun.com</strong> profile here.
+          {text}
         </div>
       </div>
       
