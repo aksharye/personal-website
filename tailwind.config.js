@@ -15,7 +15,7 @@ module.exports = {
         'lg': '1.75vh',
         'xl': '2vh',
         '2xl': '2vh',
-        '3xl': '3vh',
+        '3xl': '2.5vh',
         '4xl': '4vh',
         '5xl': '5vh',
         '6xl': '6vh',
