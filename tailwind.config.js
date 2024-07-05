@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -48,6 +49,9 @@ module.exports = {
         'text-slide-6': 'text-slide-6 30s cubic-bezier(0.83, 0, 0.17, 1) infinite',
         'text-slide-7': 'text-slide-7 35s cubic-bezier(0.83, 0, 0.17, 1) infinite',
         'text-slide-8': 'text-slide-8 40s cubic-bezier(0.83, 0, 0.17, 1) infinite',
+    },
+    screens: {
+        'md': '1200px',
     },
     keyframes: {
         'text-slide-2': {
