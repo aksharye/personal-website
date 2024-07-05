@@ -11,7 +11,7 @@ const data = [
   {title: "Conditional Model Reliance", image: "dubai.jpg", github: "https://github.com/aksharye/conditional-model-reliance", tags: ["Python", "ML"], desc: "A Python package for computing the conditional model reliance (CMR) variable importance metric, as outlined in (paper)."},
   {title: "Wyvern", image: "fall.jpg", github: "https://github.com/aksharye/wyvern-frontend", tags: ["Svelte", "Peer.js", "Socket.IO"], desc: "Lightweight video-call platform with viewer-level scene control. Think OBS, but in the hands of the viewer."},
   {title: "Variable Importance Tester", image: "sven.jpg", github: "https://github.com/KevinH2003/variable-importance", tags: ["Python", "ML"], desc: "Python package to test datasets against combinations of feature screening, models, and variable importance metrics."},
-  {title: "This Website", image: "pandas.jpg", github: "https://github.com/aksharye/personal-website", tags: ["Next.js", "Tailwind"], desc: "Source code for this website to house my cool projects and photography! Parallax effect inspired from (website)."},
+  {title: "This Website", image: "pandas.jpg", github: "https://github.com/aksharye/personal-website", tags: ["Next.js", "Tailwind"], desc: "Source code for this website to house my cool projects and photography! Parallax effect inspired from Hyperflexed's YouTube channel."},
   {title: "Mask R-CNN for Cars", image: "bird.jpg", github: "https://github.com/aksharye/mask-rcnn-car-detection", tags: ["Python", "ML"], desc: "Object detection model for detecting cars on dashcam-view images, developed with Mask-RCNN, TensorFlow, and Keras."}
 ]
 
