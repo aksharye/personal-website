@@ -3,7 +3,7 @@
 import { FaGithub } from 'react-icons/fa'
 
 let iconStyle = {'color': '#bae6fd'}
-const URI = "https://personal-website-4w9i.vercel.app/"
+const URI = "https://aksharyeccherla.com/"
 
 const Card = (props) => {
     return (
